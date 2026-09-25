@@ -64,5 +64,13 @@
     // Daten aus einem JSON ziehen (fetchen)
 
     async function fetchDataJSON() {
+        let response = await fetch('db.json');
+        let responseAsJSON = await response.json();
+        console.log(responseAsJSON);
+    }
 
+    async function fetchDataText() {
+        let response = await fetch('h1.txt');
+        let responseAsText = await response.text();
+        document.getElementById('content').innerHTML = responseAsText;
     }
