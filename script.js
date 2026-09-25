@@ -1,5 +1,9 @@
 function getPromise() {
-    return "testtext";
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("foo");
+        }, 300);
+    });
 }
 
 function usePromise() {
