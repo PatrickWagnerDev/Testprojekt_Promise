@@ -61,8 +61,8 @@
                 }
 
 // Fetch
-    // Daten aus einem JSON ziehen (fetchen)
-
+    // Daten aus einem JSON/TXT ziehen (fetchen)
+    // Mit dieser Methode kann man Daten auslesen
     async function fetchDataJSON() {
         let response = await fetch('db.json');
         let responseAsJSON = await response.json();
@@ -73,4 +73,11 @@
         let response = await fetch('h1.txt');
         let responseAsText = await response.text();
         document.getElementById('content').innerHTML = responseAsText;
+    }
+
+    // Ein test von einer echten API, Fruityvice.com
+    async function fetchDataFruity() {
+        let response = await fetch('https://www.fruityvice.com/api/fruit/apple');
+        let responseAsJSON = await response.json();
+        console.log(responseAsJSON);
     }
