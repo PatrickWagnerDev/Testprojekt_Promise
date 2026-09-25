@@ -1,7 +1,13 @@
+let promError = true;
+
 function getPromise() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("foo");
+            if (promError) {
+                reject("hat nicht geklappt");
+            } else {
+                resolve("hat geklappt");
+            }
         }, 300);
     });
 }
