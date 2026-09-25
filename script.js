@@ -59,3 +59,10 @@
                     }
                     console.log("Ende");
                 }
+
+// Fetch
+    // Daten aus einem JSON ziehen (fetchen)
+
+    async function fetchData() {
+        
+    }

@@ -1,10 +1,11 @@
 # Testprojekt_Promise
 
-a small exercise to promise in JavaScript
+a small exercise to promise and API fetch in JavaScript
 
 ## Features
 
 * How to use Promise
+* How to Fetch JSON
 
 ## Technologies
 
