@@ -1,7 +1,7 @@
 // Promise
     // Ein Promise repräsentiert ob etwas abgeschlossen wurde oder ein Fehlschlag ist
     // In diesem Beispiel, wenn es einen Error gibt (true) dann soll er eine fehlermeldung ausgeben
-        let promError = true;
+        let promError = false;
 
         function getPromise() {
             return new Promise((resolve, reject) => {
@@ -11,11 +11,15 @@
                     } else {
                         resolve("hat geklappt");
                     }
-                }, 300);
+                }, 2000);
             });
         }
 
-        function usePromise() {
-            let prom = getPromise();
+        // async sagt, dass in der Funktion ein await ist und das auch dieses gewartet werden soll
+        // bis dieses ausgefüht ist
+        async function usePromise() {
+            console.log("prom");
+            let prom = await getPromise();
+            console.log("prom2");
             console.log(prom);
         }
